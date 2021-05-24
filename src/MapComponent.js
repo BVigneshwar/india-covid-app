@@ -146,7 +146,7 @@ class MapComponent extends React.Component {
 					<div className="total_count">{states.TT.latest ?  (states.TT.recovered[states.TT.latest]*100/states.TT.confirmed[states.TT.latest]).toFixed(2) + "%" : '-'}</div>
 				</div>
 			</div>
-			<div style={{width: '90%', margin: 'auto'}}>
+			<div className="map_select_container" style={{width: '90%', margin: 'auto'}}>
 				<select className="map_select" name="prop_select" value={this.state.prop} onChange={this.handleChange}>
 					<option value="confirmed">Confirmed chart</option>
 					<option value="recovered">Recovered chart</option>

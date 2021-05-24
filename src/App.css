@@ -227,13 +227,13 @@ select{
 }
 .total_count_container, .total_count_container2{
 	display: inline-block;
-    padding: 20px 0px;
-    width: 30%;
+    padding: 20px 10px;
+    width: calc(30% - 20px);
     text-align: center;
 	margin-top: 10px;
 }
 .total_count_container2{
-	width: 46%;
+	width: calc(46% - 20px);
 }
 .total_label{
 	font-size: 12px;
@@ -410,12 +410,27 @@ select{
 .dark_mode ::-webkit-scrollbar-thumb:hover, body.dark_mode::-webkit-scrollbar-thumb:hover {
 	background: #818181; 
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
+  #map_container .map_select_container{
+	  text-align: center;
+  }
+  #map_container .map_select_container div{
+	  float: none;
+  }
+}
+@media only screen and (max-width: 800px) {
   #map_container {
 	  width : 100%;
   }
   #area_chart_container {
 	  width: 100%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #area_chart_container {
+	  text-align: center;
+  }
+  #area_chart_container select{
+	  float: none;
   }
 }
